@@ -1,0 +1,34 @@
+{
+  "name": "toptrainers-server",
+  "version": "1.0.0",
+  "description": "toptrainers-server",
+  "main": "index.js",
+  "scripts": {
+    "nodemon": "nodemon -e ts --exec \"npm run run:dev\"",
+    "clean": "shx rm -rf build",
+    "build": "tsc",
+    "run": "node ./build/main.js",
+    "run:dev": "tsc && node ./build/main.js",
+    "format": "prettier --write ./src ./test './*.{cjs,md}' ./tsconfig.json",
+    "lint": "eslint --fix .",
+    "test": "jest",
+    "prepare": "husky install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@hapi/hapi": "^21.3.2",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "faker": "^5.5.3",
+    "generate-password": "^1.7.0",
+    "hapi": "^18.1.0",
+    "pg": "^8.11.3",
+    "reflect-metadata": "^0.1.13",
+    "sequelize-typescript": "^2.1.5",
+    "speakeasy": "^2.0.0",
+    "typescript": "^5.2.2",
+    "uuid": "^9.0.0"
+  }
+}
